@@ -1,9 +1,12 @@
 package com.egorbarinov.lesson03;
 
+import java.util.concurrent.locks.Lock;
+
 public class PingPong {
 
     public static volatile boolean isAvailable = false;
-    public static int count = 4;
+    public static int count = 4000;
+    public Lock lock;
 
     public static void main(String[] args) {
 

@@ -14,7 +14,7 @@ public class MyAtomicCounter {
             for (int i = 0; i < 30; i++) {
                 new Thread(() -> {
                     synchronized (object) {
-                        count.incrementAndGet();
+                          count.incrementAndGet();
                         System.out.println(count.get());
                         try {
                             Thread.sleep(1000);
