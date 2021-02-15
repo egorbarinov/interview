@@ -8,6 +8,7 @@ public class PingPong {
     public static int count = 4000;
     public Lock lock;
 
+
     public static void main(String[] args) {
 
         while (count != 0) {

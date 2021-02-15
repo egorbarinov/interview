@@ -7,6 +7,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class MyCounterLock {
 
     public static Lock lock = new ReentrantLock();
+
     public static long count = 0;
 
     public static void main(String[] args) {
@@ -15,6 +16,7 @@ public class MyCounterLock {
             new Thread(() -> {
                 lock.lock();
                 System.out.println(++count);
+
                 lock.unlock();
             }).start();
         }
